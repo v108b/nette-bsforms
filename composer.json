@@ -1,9 +1,9 @@
 {
-    "name": "v108b/bsforms",
+    "name": "v108b/nette-bsforms",
 	"type": "library",
     "description": "Templates for Nette Forms using Twitter Bootstrap CSS framework",
     "minimum-stability": "dev",
-    "license": "GPL-3.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Martin Matousek",
