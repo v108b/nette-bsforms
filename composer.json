@@ -1,0 +1,23 @@
+{
+    "name": "v108b/bsforms",
+	"type": "library",
+    "description": "Templates for Nette Forms using Twitter Bootstrap CSS framework",
+    "minimum-stability": "dev",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Martin Matousek",
+            "email": "martin.matousek@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "nette/nette": "~2.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*@stable"
+    },
+	"autoload": {
+        "classmap": ["src"]
+	}
+}
