@@ -1,11 +1,11 @@
 <?php
 
-namespace Martiman\BSForms;
+namespace V108B\NetteBSForms;
 
 use Nette,
     Nette\Application\UI,
-	Nette\Utils\Html;
-use Tracy\Debugger;
+	Nette\Utils\Html,
+	Tracy\Debugger;
 
 class BSForm extends UI\Control {
 
