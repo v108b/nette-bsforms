@@ -1,4 +1,4 @@
-V108B/BSForms
+v108b/nette-bsforms
 ======
 Form Component for Nette Framework with Twitter Bootstrap templates
 
@@ -6,7 +6,7 @@ Form Component for Nette Framework with Twitter Bootstrap templates
 Requirements
 ------------
 
-V108B/BSForms requires PHP 5.3.2 or higher.
+v108b/nette-bsforms requires PHP 5.3.2 or higher.
 
 - [Nette Framework](https://github.com/nette/nette)
 
@@ -23,7 +23,7 @@ $ composer require v108b/nette-bsforms
 
 ##Usage 1
 ```
-		$bsform = new bsforms\BSForm();
+		$bsform = new NetteBSForms\BSForm();
 		$form = $bsform->getFormClean();
 		$form->addGroup('');
 		$form->addText('searchText', 'SearchText:');
@@ -32,7 +32,7 @@ $ composer require v108b/nette-bsforms
 
 ##Usage 2
 ```
-		$bsform = new bsforms\BSForm('Detail');
+		$bsform = new NetteBSForms\BSForm('Detail');
 		$form = $bsform->getFormPanel();
 		$form->addGroup('');
 		$form->addText('searchText', 'SearchText:');
