@@ -17,7 +17,7 @@ Installation
 The best way to install martiman/bsforms is using  [Composer](http://getcomposer.org/):
 
 ```sh
-$ composer require martiman/bsforms
+$ composer require v108b/nette-bsforms
 ```
 
 
