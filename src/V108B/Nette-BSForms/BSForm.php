@@ -42,9 +42,9 @@ class BSForm extends UI\Control {
 		}
 	}
 
-	public function render($style = null) {
+	public function render($style = null, $controlClass = null) {
 		$this->template->setFile(__DIR__ . '/' . $this->getTemplateFilename($style ?: $this->style));
-		$this->template->controlClass = 'col-md-3';
+		$this->template->controlClass = $controlClass ?: 'col-md-3';
 		$this->template->form = $this['form'];
 		$this->template->formName = $this->formName;
 		$this->template->render();
