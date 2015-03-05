@@ -24,10 +24,12 @@ $ composer require v108b/nette-bsforms
 ##Usage 1
 ```
 		$bsform = new NetteBSForms\BSForm();
-		$form = $bsform->getFormClean();
-		$form->addGroup('');
-		$form->addText('searchText', 'SearchText:');
-		$form->addSubmit('doSearch', 'Search!');
+        	$form = $bsform['form'];
+        	$form->addGroup('');
+        	$form->addText('searchText', 'SearchText:');
+        	$form->addSubmit('doSearch', 'Search!');
+        
+		{control bsForm panel}
 ```
 
 ##Usage 2
