@@ -5,7 +5,8 @@
 		<div n:class="$group->controls[0] instanceof Nette\Forms\Controls\Checkbox ? col-md-12">
 			{foreach $group->controls as $input}
 				{* get_class($input) *} 			
-				<div n:if="$input instanceof Nette\Forms\Controls\Checkbox" class="{$input->required ? required}">				
+								
+				<div n:if="$input instanceof Nette\Forms\Controls\Checkbox" class="checkbox {$controlClass} {$input->required ? required}">				
 					<label n:if="$input->caption">
 						<input type="checkbox" n:name="$input">
 						{$input->caption}

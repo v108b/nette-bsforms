@@ -3,7 +3,7 @@
 		{foreach $form->controls as $key => $control}
 			{if $control instanceof Nette\Forms\Controls\SubmitButton}			
 				{if $key=='submit'}
-					<input n:name="$control" class="btn btn-primary">
+					<input n:name="$control" class="btn btn-success">
 				{else}
 					<input n:name="$control" class="btn btn-info">
 				{/if}
