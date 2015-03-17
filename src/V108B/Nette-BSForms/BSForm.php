@@ -7,36 +7,32 @@ use Nette,
 
 class BSForm extends UI\Control {
 
-	private $form;
-	private $formName;
-	private $style = null;
-
+	private $defaultFormStyle;
+	private $defaultControlClass;	
+	
 	const STYLE_PANEL = 'panel';
 	const STYLE_CLEAN = 'clean';
 
-	public function __construct($formName = '') {
-		$this->formName = $formName;
-	}
-
-	public function createComponentForm()
-	{
-		return new UI\Form();
+	
+	public function __construct($defaultFormStyle = BSForm::STYLE_CLEAN, $defaultControlClass = "col-md-12") {
+		$this->defaultFormStyle = $defaultFormStyle;
+		$this->defaultControlClass = $defaultControlClass;
 	}
 
 	public function getTemplateFilename($style)
-	{
-		switch($style) {
+	{				
+		switch($style ?: $this->defaultFormStyle) {
 			case static::STYLE_PANEL: return 'BSFormPanel.latte';
 			case static::STYLE_CLEAN: return 'BSFormClean.latte';
 			default: return 'BSFormClean.latte';
 		}
 	}
-
-	public function render($style = null, $controlClass = null) {
-		$this->template->setFile(__DIR__ . '/' . $this->getTemplateFilename($style ?: $this->style));
-		$this->template->controlClass = $controlClass ?: 'col-md-12';
-		$this->template->form = $this['form'];
-		$this->template->formName = $this->formName;
+	
+	public function render($form = null, $style = null, $controlClass = null, $formName = "") {
+		$this->template->setFile(__DIR__ . '/' . $this->getTemplateFilename($style));
+		$this->template->controlClass = $controlClass ?: $this->defaultControlClass;
+		$this->template->form = $form;
+		$this->template->formName = $formName;
 		$this->template->render();
 	}
 }
