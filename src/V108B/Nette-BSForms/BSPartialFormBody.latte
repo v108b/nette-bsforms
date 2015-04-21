@@ -19,6 +19,12 @@
 					<input n:if="$input instanceof Nette\Forms\Controls\TextInput" n:name="$input" class="form-control">
 					<span class=error n:ifcontent>{$input->error}</span>
 				</div>
+				
+				<div n:if="$input instanceof Nette\Forms\Controls\TextArea" class="form-group {$controlClass} {$input->required ? required}">
+					<label n:if="$input->label" n:name="$input" class="control-label">{$input->caption}</label>
+					<textarea n:if="$input instanceof Nette\Forms\Controls\TextArea" n:name="$input" class="form-control" rows="6"></textarea>
+					<span class=error n:ifcontent>{$input->error}</span>
+				</div>				
 			{/foreach}
 		</div>
 	</div>
