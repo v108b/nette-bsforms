@@ -24,7 +24,26 @@
 					<label n:if="$input->label" n:name="$input" class="control-label">{$input->caption}</label>
 					<textarea n:if="$input instanceof Nette\Forms\Controls\TextArea" n:name="$input" class="form-control" rows="6"></textarea>
 					<span class=error n:ifcontent>{$input->error}</span>
+				</div>
+				
+				<div n:if="$input instanceof Nella\Forms\DateTime\DateInput" class="form-group {$controlClass} {$input->required ? required}">
+					<label n:if="$input->label" n:name="$input" class="control-label">{$input->caption}</label>
+					<input n:if="$input instanceof Nella\Forms\DateTime\DateInput" n:name="$input" class="form-control">
+					<span class=error n:ifcontent>{$input->error}</span>
 				</div>				
+				
+				<div n:if="$input instanceof Nella\Forms\DateTime\DateTimeInput" class="form-group {$controlClass} {$input->required ? required}">
+					<label n:if="$input->label" n:name="$input" class="control-label">{$input->caption}</label>
+					<input n:if="$input instanceof Nella\Forms\DateTime\DateTimeInput" n:name="$input" class="form-control">
+					<span class=error n:ifcontent>{$input->error}</span>
+				</div>
+				
+				<div n:if="$input instanceof Nette\Forms\Controls\SelectBox" class="form-group {$controlClass} {$input->required ? required}">
+					<label n:if="$input->label" n:name="$input" class="control-label">{$input->caption}</label>
+					<select n:if="$input instanceof Nette\Forms\Controls\SelectBox" n:name="$input" class="form-control"></select>
+					<span class=error n:ifcontent>{$input->error}</span>
+				</div>
+				
 			{/foreach}
 		</div>
 	</div>
