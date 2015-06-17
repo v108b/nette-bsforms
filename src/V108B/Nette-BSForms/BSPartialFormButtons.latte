@@ -2,11 +2,16 @@
 	<div class="col-md-12">
 		{foreach $form->controls as $key => $control}
 			{if $control instanceof Nette\Forms\Controls\Button}
-				{dump $control}
+        {if isset($control->control->attrs['class'])}
+          {var $class = $control->control->attrs['class']}
+        {else}
+          {var $class = 'btn-info'}
+        {/if}
+
 				{if $key=='submit'}
 					<input n:name="$control" class="btn btn-success">
 				{else}
-					<input n:name="$control" class="btn btn-info">
+					<input n:name="$control" class="btn {$class} ">
 				{/if}
 			{/if}
 		{/foreach}
